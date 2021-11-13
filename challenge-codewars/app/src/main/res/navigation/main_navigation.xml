@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.challenge.codewars.feature.search.presentation.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_memberFragment"
+            app:destination="@id/memberFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/memberFragment"
+        android:name="com.challenge.codewars.feature.member.presentation.MemberFragment"
+        android:label="Member"
+        tools:layout="@layout/fragment_member">
+
+        <action
+            android:id="@+id/action_memberFragment_to_challengeFragment"
+            app:destination="@id/challengeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/challengeFragment"
+        android:name="com.challenge.codewars.feature.challenge.presentation.ChallengeFragment"
+        android:label="Challenge"
+        tools:layout="@layout/fragment_challenge" />
+</navigation>
