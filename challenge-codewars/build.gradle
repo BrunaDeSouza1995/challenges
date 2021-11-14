@@ -16,6 +16,7 @@ buildscript {
     ext.kotlin_version = '1.5.31'
     // M
     ext.material = '1.4.0'
+    ext.mockk = '1.12.0'
     // N
     ext.navigation = '2.3.5'
     // O
@@ -23,6 +24,7 @@ buildscript {
     // R
     ext.retrofit_version = '2.9.0'
     ext.rxandroid = '2.1.0'
+    ext.room = '2.3.0'
 
     repositories {
         google()

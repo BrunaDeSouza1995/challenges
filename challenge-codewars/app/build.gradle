@@ -54,6 +54,7 @@ dependencies {
     testImplementation "junit:junit:$junit"
     // M
     implementation "com.google.android.material:material:$material"
+    testImplementation "io.mockk:mockk:$mockk"
     // N
     implementation("androidx.navigation:navigation-fragment-ktx:$navigation")
     implementation("androidx.navigation:navigation-ui-ktx:$navigation")
@@ -62,5 +63,7 @@ dependencies {
     // R
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    implementation "androidx.room:room-runtime:$room"
+    kapt "androidx.room:room-compiler:$room"
 
 }

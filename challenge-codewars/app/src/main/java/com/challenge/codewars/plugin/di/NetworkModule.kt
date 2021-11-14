@@ -1,6 +1,6 @@
 package com.challenge.codewars.plugin.di
 
-import com.challenge.codewars.plugin.network.Service
+import com.challenge.codewars.plugin.data.datasource.remote.Service
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.challenge.codewars.plugin.network
+package com.challenge.codewars.plugin.data.datasource.remote
 
 import com.challenge.codewars.feature.base.data.dto.MemberDTO
 import io.reactivex.Observable
