@@ -4,7 +4,7 @@ import io.reactivex.schedulers.Schedulers.trampoline
 import org.junit.Assert.*
 import org.junit.Test
 
-class UseCaseTest {
+class BaseUseCaseTest {
 
     private val useCase = FakeUseCase()
     private val input = Pair(1, 2)

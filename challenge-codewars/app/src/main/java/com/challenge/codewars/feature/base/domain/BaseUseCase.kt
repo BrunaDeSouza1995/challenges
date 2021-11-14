@@ -5,7 +5,7 @@ import io.reactivex.Scheduler
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-abstract class UseCase<I, O> {
+abstract class BaseUseCase<I, O> {
 
     fun invoke(
         input: I? = null,

@@ -3,7 +3,9 @@ package com.challenge.codewars.feature.main.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.challenge.codewars.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     var binding: ActivityMainBinding? = null

@@ -2,6 +2,7 @@
 buildscript {
     // A
     ext.appcompat = '1.3.1'
+    ext.adapter_rxjava = '2.9.0'
     // C
     ext.constraintlayout = '2.1.1'
     ext.core_ext = '1.7.0'
