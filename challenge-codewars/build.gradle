@@ -9,6 +9,8 @@ buildscript {
     ext.gson_version = '2.8.8'
     // H
     ext.hilt_version = '2.40'
+    // J
+    ext.junit = '4.13.2'
     // K
     ext.kotlin_version = '1.5.31'
     // M
@@ -19,6 +21,7 @@ buildscript {
     ext.okhttp_version = '4.9.0'
     // R
     ext.retrofit_version = '2.9.0'
+    ext.rxandroid = '2.1.0'
 
     repositories {
         google()

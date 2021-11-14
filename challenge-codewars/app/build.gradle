@@ -49,6 +49,8 @@ dependencies {
     // H
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    // J
+    testImplementation "junit:junit:$junit"
     // M
     implementation "com.google.android.material:material:$material"
     // N
@@ -58,4 +60,6 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
     // R
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+
 }
