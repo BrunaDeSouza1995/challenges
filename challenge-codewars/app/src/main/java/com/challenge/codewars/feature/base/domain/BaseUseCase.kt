@@ -11,8 +11,8 @@ abstract class BaseUseCase<I, O> {
         input: I? = null,
         subscribe: Scheduler = Schedulers.io(),
         observe: Scheduler = Schedulers.io(),
-        onDispatchSuccessResult: (successResult: O) -> Unit,
-        onDispatchErrorResult: (errorResult: Throwable) -> Unit
+        onDispatchSuccessResult: (successResult: O) -> Unit = {},
+        onDispatchErrorResult: (errorResult: Throwable) -> Unit = {}
     ): Disposable {
         return Observable
             .fromCallable { guardEntrance(input) }

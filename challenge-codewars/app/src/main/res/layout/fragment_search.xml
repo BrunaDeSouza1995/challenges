@@ -65,7 +65,8 @@
         app:layout_constraintBottom_toBottomOf="@id/search_result_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/search_result_text"
-        app:singleSelection="true">
+        app:singleSelection="true"
+        app:selectionRequired="true">
 
         <Button
             android:id="@+id/search_result_sort_by_button"
@@ -73,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            app:icon="@drawable/ic_sort_24" />
+            app:icon="@drawable/ic_sort_by_alpha_24" />
 
         <Button
             android:id="@+id/search_result_sort_by_rack_button"
@@ -81,14 +82,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            app:icon="@drawable/ic_sort_by_alpha_24" />
+            app:icon="@drawable/ic_sort_24" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/materialButtonToggleGroup"
+        android:id="@+id/search_result_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "member")
 data class MemberEntity(
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0,
+    var id: Int = 0,
     val name: String,
     val rank: Int,
     val bestLanguage: String,
