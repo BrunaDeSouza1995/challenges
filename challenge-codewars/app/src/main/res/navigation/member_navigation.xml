@@ -23,16 +23,16 @@
         android:name="com.challenge.codewars.feature.member.presentation.AuthoredChallengesByMemberFragment"
         tools:layout="@layout/fragment_challenges_by_member" />
 
-    <fragment
+    <activity
         android:id="@+id/challengeFragment"
-        android:name="com.challenge.codewars.feature.challenge.presentation.ChallengeFragment"
-        tools:layout="@layout/fragment_challenge" >
+        android:name="com.challenge.codewars.feature.challenge.presentation.ChallengeActivity"
+        tools:layout="@layout/activity_challenge">
 
         <argument
             android:name="id"
             app:argType="string"
             app:nullable="false" />
-    </fragment>
+    </activity>
 
     <activity
         android:id="@+id/mainActivity"

@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".feature.member.presentation.MemberActivity" />
+        <activity android:name=".feature.challenge.presentation.ChallengeActivity" />
     </application>
 
 </manifest>

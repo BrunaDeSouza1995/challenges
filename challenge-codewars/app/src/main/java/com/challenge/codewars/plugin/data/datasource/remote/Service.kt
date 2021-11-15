@@ -1,6 +1,7 @@
 package com.challenge.codewars.plugin.data.datasource.remote
 
 import com.challenge.codewars.feature.base.data.dto.AuthoredChallengeDTO
+import com.challenge.codewars.feature.base.data.dto.ChallengeDTO
 import com.challenge.codewars.feature.base.data.dto.CompletedChallengeDTO
 import com.challenge.codewars.feature.base.data.dto.MemberDTO
 import io.reactivex.Observable
@@ -18,4 +19,7 @@ interface Service {
 
     @GET("api/v1/users/{user}/code-challenges/authored")
     fun getAuthoredChallengesByMember(@Path("user") user: String): Observable<Response<AuthoredChallengeDTO>>
+
+    @GET("api/v1/code-challenges/{challenge}")
+    fun getChallengeInformation(@Path("challenge") id: String) : Observable<Response<ChallengeDTO>>
 }

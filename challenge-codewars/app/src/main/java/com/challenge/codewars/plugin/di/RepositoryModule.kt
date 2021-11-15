@@ -1,7 +1,9 @@
 package com.challenge.codewars.plugin.di
 
+import com.challenge.codewars.feature.challenge.data.ChallengeRepository
 import com.challenge.codewars.feature.member.data.MemberRepository
 import com.challenge.codewars.feature.search.data.SearchRepository
+import com.challenge.codewars.plugin.data.repository.ChallengeRepositoryImpl
 import com.challenge.codewars.plugin.data.repository.MemberRepositoryImpl
 import com.challenge.codewars.plugin.data.repository.SearchRepositoryImpl
 import dagger.Binds
@@ -18,4 +20,7 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindsMemberRepository(memberRepository: MemberRepositoryImpl): MemberRepository
+
+    @Binds
+    abstract fun bindsChallengeRepository(challengeRepository: ChallengeRepositoryImpl): ChallengeRepository
 }
