@@ -9,6 +9,7 @@ import com.challenge.codewars.feature.search.domain.GetSearchedMembersUseCase
 import com.challenge.codewars.feature.search.domain.SearchMemberByUsernameUseCase
 import com.challenge.codewars.feature.search.presentation.model.MemberSortBy
 import com.challenge.codewars.feature.search.presentation.model.SearchEvent
+import com.challenge.codewars.feature.search.presentation.model.SearchViewState
 import com.challenge.codewars.feature.search.presentation.model.extension.sortByIdOrRank
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -22,6 +23,7 @@ class SearchViewModel @Inject constructor(
     private var memberSortBy = MemberSortBy.ID
 
     val searchedMembersLiveData: MutableLiveData<List<MemberEntity>> by lazy { MutableLiveData<List<MemberEntity>>() }
+    val viewStateLiveData = MutableLiveData<SearchViewState>()
     val searchDirections = MutableLiveData<NavDirections>()
 
     init {
@@ -49,7 +51,13 @@ class SearchViewModel @Inject constructor(
     }
 
     private fun searchMemberByUsernameOrId(text: String) {
-        searchMemberByUsernameUseCase.invoke(text)
+        searchMemberByUsernameUseCase.invoke(text,
+            onDispatchSuccessResult = {
+                viewStateLiveData.postValue(SearchViewState.SuccessSearchingViewState)
+            },
+            onDispatchErrorResult = {
+                viewStateLiveData.postValue(SearchViewState.ErrorSearchingViewState)
+            })
     }
 
     private fun showChallengesByMember(event: SearchEvent.ShowChallengesByMember) {

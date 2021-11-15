@@ -2,9 +2,8 @@ package com.challenge.codewars.feature.search.data
 
 import com.challenge.codewars.feature.search.data.dto.MemberDTO
 import com.challenge.codewars.feature.search.data.dto.MemberFakeDTO.member
-import com.challenge.codewars.feature.search.data.dto.MemberFakeDTO.member1
 import com.challenge.codewars.feature.search.data.entity.MemberEntity
-import com.challenge.codewars.feature.search.data.extension.toEntity
+import com.challenge.codewars.feature.search.data.entity.MemberFakeEntity.membersEntity
 import io.reactivex.Observable
 
 class SearchFakeRepository : SearchRepository {
@@ -15,8 +14,7 @@ class SearchFakeRepository : SearchRepository {
     }
 
     override fun getSearchedMembers(): Observable<Result<List<MemberEntity>>> {
-        val list = listOf(member().toEntity(), member1().toEntity())
-        val result = Result.success(list)
+        val result = Result.success(membersEntity())
         return Observable.just(result)
     }
 }

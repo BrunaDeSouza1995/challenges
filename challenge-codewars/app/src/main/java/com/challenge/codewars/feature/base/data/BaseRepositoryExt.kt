@@ -5,7 +5,7 @@ import retrofit2.HttpException
 import retrofit2.Response
 
 fun <R>  Observable<Response<R>>.call(): Observable<Result<R>> {
-    return this.switchMap(Response<R>::handleResponse)
+    return switchMap(Response<R>::handleResponse)
         .map(Result.Companion::success)
         .onErrorReturn(Result.Companion::failure)
 }

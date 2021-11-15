@@ -8,6 +8,7 @@ import com.challenge.codewars.feature.search.data.entity.MemberFakeEntity.member
 import com.challenge.codewars.feature.search.domain.GetSearchedMembersUseCase
 import com.challenge.codewars.feature.search.domain.SearchMemberByUsernameUseCase
 import com.challenge.codewars.feature.search.presentation.model.SearchEvent
+import com.challenge.codewars.feature.search.presentation.model.SearchViewState
 import com.challenge.codewars.plugin.getOrAwaitValue
 import io.mockk.spyk
 import io.mockk.verify
@@ -22,8 +23,8 @@ class SearchViewModelTest {
     val executorRule = InstantTaskExecutorRule()
 
     private val searchRepository = SearchFakeRepository()
-    private val getSearchedMembersUseCase = spyk(GetSearchedMembersUseCase(searchRepository))
-    private val searchMemberByUsernameUseCase = spyk(SearchMemberByUsernameUseCase(searchRepository))
+    private val getSearchedMembersUseCase = GetSearchedMembersUseCase(searchRepository)
+    private val searchMemberByUsernameUseCase = SearchMemberByUsernameUseCase(searchRepository)
     private val username = "some_user"
     private lateinit var viewModel: SearchViewModel
 
@@ -38,7 +39,9 @@ class SearchViewModelTest {
 
         viewModel.executeEvent(event)
 
-        verify(exactly = 1) { searchMemberByUsernameUseCase.invoke(username) }
+        viewModel.viewStateLiveData.getOrAwaitValue().run {
+            assertEquals(SearchViewState.SuccessSearchingViewState, this)
+        }
     }
 
     @Test

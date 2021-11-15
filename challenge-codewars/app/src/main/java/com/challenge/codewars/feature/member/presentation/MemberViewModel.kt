@@ -27,8 +27,8 @@ class MemberViewModel @Inject constructor(
     fun executeEvent(event: MemberEvent) {
         when (event) {
             is MemberEvent.SetUpUsername -> setupUsername(event)
-            is MemberEvent.FetchAuthoredChallengesByMember -> fetchAuthoredChallengesByMember()
-            is MemberEvent.FetchCompletedChallengesByMember -> fetchCompletedChallengesByMember()
+            MemberEvent.FetchAuthoredChallengesByMember -> fetchAuthoredChallengesByMember()
+            MemberEvent.FetchCompletedChallengesByMember -> fetchCompletedChallengesByMember()
             is MemberEvent.ShowChallenge -> showChallenge(event)
         }
     }

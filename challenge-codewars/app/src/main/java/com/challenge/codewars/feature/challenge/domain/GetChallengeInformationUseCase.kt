@@ -9,6 +9,7 @@ import javax.inject.Inject
 class GetChallengeInformationUseCase @Inject constructor(
     val repository: ChallengeRepository
 ) : BaseUseCase<String, ChallengeDTO>() {
+
     override fun execute(input: String?): Observable<Result<ChallengeDTO>> {
         requireNotNull(input)
 

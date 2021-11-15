@@ -9,9 +9,9 @@
         android:id="@+id/search_text_input_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:hint="@string/search"
         app:layout_constraintEnd_toStartOf="@id/search_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:id="@+id/search_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="@id/search_text_input_layout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:id="@+id/search_divider"
         android:layout_width="0dp"
         android:layout_height="2dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_big"
         android:background="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,9 +47,9 @@
         android:id="@+id/search_result_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:text="@string/result"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
         app:layout_constraintEnd_toStartOf="@id/search_result_sort_by_group"
@@ -60,20 +60,19 @@
         android:id="@+id/search_result_sort_by_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/margin_normal"
         app:checkedButton="@id/search_result_sort_by_button"
         app:layout_constraintBottom_toBottomOf="@id/search_result_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/search_result_text"
-        app:singleSelection="true"
-        app:selectionRequired="true">
+        app:selectionRequired="true"
+        app:singleSelection="true">
 
         <Button
             android:id="@+id/search_result_sort_by_button"
             style="@style/Widget.App.Button.OutlinedButton.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             app:icon="@drawable/ic_sort_by_alpha_24" />
 
         <Button
@@ -81,7 +80,6 @@
             style="@style/Widget.App.Button.OutlinedButton.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             app:icon="@drawable/ic_sort_24" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
