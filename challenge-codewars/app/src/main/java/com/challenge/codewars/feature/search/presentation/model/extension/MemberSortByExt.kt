@@ -1,7 +1,7 @@
-package com.challenge.codewars.feature.search.presentation.data.extension
+package com.challenge.codewars.feature.search.presentation.model.extension
 
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
-import com.challenge.codewars.feature.search.presentation.data.MemberSortBy
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.presentation.model.MemberSortBy
 
 fun MutableList<MemberEntity>?.sortByIdOrRank(sortBy: MemberSortBy) {
     when (sortBy) {

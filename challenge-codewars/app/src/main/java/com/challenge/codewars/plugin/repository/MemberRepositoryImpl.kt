@@ -1,4 +1,4 @@
-package com.challenge.codewars.plugin.data.repository
+package com.challenge.codewars.plugin.repository
 
 import com.challenge.codewars.feature.base.data.dto.AuthoredChallengeDTO
 import com.challenge.codewars.feature.base.data.dto.CompletedChallengeDTO
@@ -8,13 +8,13 @@ import com.challenge.codewars.feature.base.data.entity.ChallengeEntity.Challenge
 import com.challenge.codewars.feature.base.data.entity.ChallengeEntity.ChallengeType.COMPLETED
 import com.challenge.codewars.feature.base.data.repository.call
 import com.challenge.codewars.feature.member.data.MemberRepository
-import com.challenge.codewars.plugin.data.datasource.local.dao.ChallengeDao
-import com.challenge.codewars.plugin.data.datasource.remote.Service
+import com.challenge.codewars.plugin.database.dao.ChallengeDao
+import com.challenge.codewars.plugin.network.CodewarsService
 import io.reactivex.Observable
 import javax.inject.Inject
 
 class MemberRepositoryImpl @Inject constructor(
-    private val service: Service,
+    private val service: CodewarsService,
     private val dao: ChallengeDao
 ) : MemberRepository {
 

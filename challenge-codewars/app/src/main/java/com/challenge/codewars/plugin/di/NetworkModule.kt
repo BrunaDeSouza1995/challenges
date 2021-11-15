@@ -1,6 +1,6 @@
 package com.challenge.codewars.plugin.di
 
-import com.challenge.codewars.plugin.data.datasource.remote.Service
+import com.challenge.codewars.plugin.network.CodewarsService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -63,7 +63,7 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun providesService(retrofit: Retrofit): Service {
-        return retrofit.create(Service::class.java)
+    fun providesService(retrofit: Retrofit): CodewarsService {
+        return retrofit.create(CodewarsService::class.java)
     }
 }

@@ -2,9 +2,9 @@ package com.challenge.codewars.plugin.di
 
 import android.content.Context
 import androidx.room.Room
-import com.challenge.codewars.plugin.data.datasource.local.Database
-import com.challenge.codewars.plugin.data.datasource.local.dao.ChallengeDao
-import com.challenge.codewars.plugin.data.datasource.local.dao.MemberDao
+import com.challenge.codewars.plugin.database.Database
+import com.challenge.codewars.plugin.database.dao.ChallengeDao
+import com.challenge.codewars.plugin.database.dao.MemberDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

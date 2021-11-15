@@ -1,7 +1,8 @@
 package com.challenge.codewars.feature.base.data.dto.extension
 
-import com.challenge.codewars.feature.base.data.dto.MemberDTO
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.dto.MemberDTO
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.extension.toEntity
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.Assert.assertEquals

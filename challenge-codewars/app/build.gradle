@@ -36,6 +36,8 @@ android {
     viewBinding {
         enabled = true
     }
+
+    sourceSets.test.resources.srcDirs += ["src/main/assets"]
 }
 
 dependencies {

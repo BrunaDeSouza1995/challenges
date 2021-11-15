@@ -1,7 +1,7 @@
 package com.challenge.codewars.feature.base.data.dto.extension
 
-import com.challenge.codewars.feature.base.data.dto.LanguageDTO
-import com.challenge.codewars.feature.base.data.dto.LanguagesDTO
+import com.challenge.codewars.feature.search.data.dto.LanguageDTO
+import com.challenge.codewars.feature.search.data.dto.LanguagesDTO
 
 fun LanguagesDTO.getList(): Map<String, LanguageDTO?> {
     return mapOf(

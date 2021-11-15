@@ -1,7 +1,7 @@
 package com.challenge.codewars.feature.search.data
 
-import com.challenge.codewars.feature.base.data.dto.MemberDTO
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.dto.MemberDTO
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 import io.reactivex.Observable
 
 interface SearchRepository {

@@ -1,8 +1,8 @@
-package com.challenge.codewars.feature.search.presentation
+package com.challenge.codewars.feature.search.presentation.list
 
 import androidx.recyclerview.widget.RecyclerView
 import com.challenge.codewars.databinding.ItemListMemberBinding
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 
 class MemberViewHolder(
     private val binding: ItemListMemberBinding,

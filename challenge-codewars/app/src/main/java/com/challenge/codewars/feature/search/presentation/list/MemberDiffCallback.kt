@@ -1,7 +1,7 @@
-package com.challenge.codewars.feature.search.presentation
+package com.challenge.codewars.feature.search.presentation.list
 
 import androidx.recyclerview.widget.DiffUtil
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 
 object MemberDiffCallback : DiffUtil.ItemCallback<MemberEntity>() {
     override fun areItemsTheSame(oldItem: MemberEntity, newItem: MemberEntity): Boolean {

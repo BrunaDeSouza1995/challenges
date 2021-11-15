@@ -1,7 +1,7 @@
-package com.challenge.codewars.plugin.data.datasource.local.dao
+package com.challenge.codewars.plugin.database.dao
 
 import androidx.room.*
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 import io.reactivex.Observable
 
 private const val LIMIT = 5

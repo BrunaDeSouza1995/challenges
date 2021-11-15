@@ -1,4 +1,4 @@
-package com.challenge.codewars.feature.search.presentation.data
+package com.challenge.codewars.feature.search.presentation.model
 
 sealed class SearchEvent {
     data class SearchMemberByUsernameEvent(val username: String) : SearchEvent()

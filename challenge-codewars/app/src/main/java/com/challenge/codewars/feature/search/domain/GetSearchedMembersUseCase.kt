@@ -1,6 +1,6 @@
 package com.challenge.codewars.feature.search.domain
 
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 import com.challenge.codewars.feature.base.domain.BaseUseCase
 import com.challenge.codewars.feature.search.data.SearchRepository
 import io.reactivex.Observable

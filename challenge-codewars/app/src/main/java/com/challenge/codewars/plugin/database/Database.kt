@@ -1,13 +1,12 @@
-package com.challenge.codewars.plugin.data.datasource.local
+package com.challenge.codewars.plugin.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
-import com.challenge.codewars.plugin.data.datasource.local.dao.ChallengeDao
-import com.challenge.codewars.plugin.data.datasource.local.dao.ChallengeTypeConverter
-import com.challenge.codewars.plugin.data.datasource.local.dao.MemberDao
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
+import com.challenge.codewars.plugin.database.dao.ChallengeDao
+import com.challenge.codewars.plugin.database.dao.MemberDao
 
 @TypeConverters(ChallengeTypeConverter::class)
 @Database(

@@ -1,17 +1,17 @@
-package com.challenge.codewars.plugin.data.repository
+package com.challenge.codewars.plugin.repository
 
-import com.challenge.codewars.feature.base.data.dto.MemberDTO
-import com.challenge.codewars.feature.base.data.dto.extension.toEntity
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.dto.MemberDTO
+import com.challenge.codewars.feature.search.data.extension.toEntity
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 import com.challenge.codewars.feature.base.data.repository.call
 import com.challenge.codewars.feature.search.data.SearchRepository
-import com.challenge.codewars.plugin.data.datasource.local.dao.MemberDao
-import com.challenge.codewars.plugin.data.datasource.remote.Service
+import com.challenge.codewars.plugin.database.dao.MemberDao
+import com.challenge.codewars.plugin.network.CodewarsService
 import io.reactivex.Observable
 import javax.inject.Inject
 
 class SearchRepositoryImpl @Inject constructor(
-    private val service: Service,
+    private val service: CodewarsService,
     private val memberDao: MemberDao
 ) : SearchRepository {
 

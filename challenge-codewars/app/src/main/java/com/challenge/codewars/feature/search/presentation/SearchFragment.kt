@@ -8,7 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.challenge.codewars.databinding.FragmentSearchBinding
-import com.challenge.codewars.feature.search.presentation.data.SearchEvent
+import com.challenge.codewars.feature.search.presentation.list.MemberAdapter
+import com.challenge.codewars.feature.search.presentation.model.SearchEvent
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,7 +19,7 @@ class SearchFragment : Fragment() {
 
     private val viewModel: SearchViewModel by viewModels()
 
-    private var adapter: SearchAdapter? = SearchAdapter(::showChallengesByMember)
+    private var adapter: MemberAdapter? = MemberAdapter(::showChallengesByMember)
 
     override fun onCreateView(
         inflater: LayoutInflater,

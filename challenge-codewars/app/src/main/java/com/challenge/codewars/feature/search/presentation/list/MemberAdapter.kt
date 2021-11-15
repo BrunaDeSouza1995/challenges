@@ -1,12 +1,12 @@
-package com.challenge.codewars.feature.search.presentation
+package com.challenge.codewars.feature.search.presentation.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.challenge.codewars.databinding.ItemListMemberBinding.inflate
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 
-class SearchAdapter(
+class MemberAdapter(
     private val onClick: (String) -> Unit
 ) : ListAdapter<MemberEntity, MemberViewHolder>(MemberDiffCallback) {
 

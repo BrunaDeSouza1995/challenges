@@ -1,7 +1,8 @@
-package com.challenge.codewars.feature.base.data.dto.extension
+package com.challenge.codewars.feature.search.data.extension
 
-import com.challenge.codewars.feature.base.data.dto.MemberDTO
-import com.challenge.codewars.feature.base.data.entity.MemberEntity
+import com.challenge.codewars.feature.base.data.dto.extension.getList
+import com.challenge.codewars.feature.search.data.dto.MemberDTO
+import com.challenge.codewars.feature.search.data.entity.MemberEntity
 
 fun MemberDTO.toEntity(): MemberEntity {
     val bestLanguage = ranks.languages.getList().maxByOrNull { it.value?.score ?: 0 }

@@ -1,4 +1,4 @@
-package com.challenge.codewars.plugin.data.datasource.local.dao
+package com.challenge.codewars.plugin.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

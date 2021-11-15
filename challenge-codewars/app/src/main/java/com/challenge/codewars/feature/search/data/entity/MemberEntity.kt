@@ -1,4 +1,4 @@
-package com.challenge.codewars.feature.base.data.entity
+package com.challenge.codewars.feature.search.data.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

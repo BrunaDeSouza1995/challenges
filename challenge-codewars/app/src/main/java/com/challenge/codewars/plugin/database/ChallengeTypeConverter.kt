@@ -1,4 +1,4 @@
-package com.challenge.codewars.plugin.data.datasource.local.dao
+package com.challenge.codewars.plugin.database
 
 import androidx.room.TypeConverter
 import com.challenge.codewars.feature.base.data.entity.ChallengeEntity.ChallengeType
