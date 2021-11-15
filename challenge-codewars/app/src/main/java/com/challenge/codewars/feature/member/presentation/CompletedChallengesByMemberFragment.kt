@@ -1,32 +1,29 @@
 package com.challenge.codewars.feature.member.presentation
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.challenge.codewars.databinding.FragmentCompletedChallengesByMemberBinding
+import androidx.fragment.app.viewModels
+import com.challenge.codewars.feature.member.presentation.data.MemberEvent
+import com.challenge.codewars.feature.member.presentation.data.MemberViewState
+import dagger.hilt.android.AndroidEntryPoint
 
-class CompletedChallengesByMemberFragment : Fragment() {
+@AndroidEntryPoint
+class CompletedChallengesByMemberFragment : AbstractChallengesByMemberFragment() {
 
-    var binding: FragmentCompletedChallengesByMemberBinding? = null
+    private val memberViewModel: MemberViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentCompletedChallengesByMemberBinding.inflate(inflater, container, false)
-        return binding?.root
+    override fun getViewModel(): MemberViewModel {
+        return memberViewModel
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val username = (activity as? MemberActivity)?.args?.username
+    override fun fetchChallengesByMember() {
+        val event = MemberEvent.FetchCompletedChallengesByMember
+        memberViewModel.executeEvent(event)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
+    override fun setUpObservables() {
+        super.setUpObservables()
+        memberViewModel.viewStateLiveData.observe(viewLifecycleOwner) {
+            val list = (it as? MemberViewState.CompletedChallengesViewState)?.list
+            list?.let { adapter.submitList(list) }
+        }
     }
-
 }

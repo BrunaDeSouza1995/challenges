@@ -1,26 +1,29 @@
 package com.challenge.codewars.feature.member.presentation
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.challenge.codewars.databinding.FragmentAuthoredChallengesByMemberBinding
+import androidx.fragment.app.viewModels
+import com.challenge.codewars.feature.member.presentation.data.MemberEvent
+import com.challenge.codewars.feature.member.presentation.data.MemberViewState
+import dagger.hilt.android.AndroidEntryPoint
 
-class AuthoredChallengesByMemberFragment : Fragment() {
+@AndroidEntryPoint
+class AuthoredChallengesByMemberFragment : AbstractChallengesByMemberFragment() {
 
-    var binding: FragmentAuthoredChallengesByMemberBinding? = null
+    private val memberViewModel: MemberViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentAuthoredChallengesByMemberBinding.inflate(inflater, container, false)
-        return binding?.root
+    override fun getViewModel(): MemberViewModel {
+        return memberViewModel
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
+    override fun fetchChallengesByMember() {
+        val event = MemberEvent.FetchAuthoredChallengesByMember
+        memberViewModel.executeEvent(event)
+    }
+
+    override fun setUpObservables() {
+        super.setUpObservables()
+        memberViewModel.viewStateLiveData.observe(viewLifecycleOwner) {
+            val list = (it as? MemberViewState.AuthoredChallengesViewState)?.list
+            list?.let { adapter.submitList(list) }
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.challenge.codewars.plugin.di
 import android.content.Context
 import androidx.room.Room
 import com.challenge.codewars.plugin.data.datasource.local.Database
+import com.challenge.codewars.plugin.data.datasource.local.dao.ChallengeDao
 import com.challenge.codewars.plugin.data.datasource.local.dao.MemberDao
 import dagger.Module
 import dagger.Provides
@@ -19,16 +20,19 @@ class DatabaseModule {
 
     @Provides
     @Singleton
-    fun providesDatabase(@ApplicationContext context: Context) : Database {
-        return Room.databaseBuilder(
-            context,
-            Database::class.java,
-            DATABASE_NAME
-        ).build()
+    fun providesDatabase(@ApplicationContext context: Context): Database {
+        return Room.databaseBuilder(context, Database::class.java, DATABASE_NAME)
+            .fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides
     fun providesMemberDao(database: Database): MemberDao {
         return database.memberDao()
+    }
+
+    @Provides
+    fun providesChallengeDao(database: Database): ChallengeDao {
+        return database.challengeDao()
     }
 }

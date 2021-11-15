@@ -10,7 +10,6 @@ class SearchAdapter(
     private val onClick: (String) -> Unit
 ) : ListAdapter<MemberEntity, MemberViewHolder>(MemberDiffCallback) {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemberViewHolder {
         val binding = inflate(LayoutInflater.from(parent.context), parent, false)
         return MemberViewHolder(binding, onClick)

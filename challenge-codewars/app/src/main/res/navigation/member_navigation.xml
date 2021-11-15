@@ -5,26 +5,37 @@
     android:id="@+id/member_navigation"
     app:startDestination="@id/completedChallengesByMemberFragment">
 
+    <action
+        android:id="@+id/action_to_mainActivity"
+        app:destination="@id/mainActivity" />
+
+    <action
+        android:id="@+id/action_to_challengeFragment"
+        app:destination="@id/challengeFragment" />
+
     <fragment
         android:id="@+id/completedChallengesByMemberFragment"
         android:name="com.challenge.codewars.feature.member.presentation.CompletedChallengesByMemberFragment"
-        tools:layout="@layout/fragment_completed_challenges_by_member">
-        <action
-            android:id="@+id/action_completedChallengesByMemberFragment_to_challengeFragment"
-            app:destination="@id/challengeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_challenges_by_member" />
 
     <fragment
         android:id="@+id/authoredChallengesByMemberFragment"
         android:name="com.challenge.codewars.feature.member.presentation.AuthoredChallengesByMemberFragment"
-        tools:layout="@layout/fragment_authored_challenges_by_member">
-        <action
-            android:id="@+id/action_authoredChallengesByMemberFragment_to_challengeFragment"
-            app:destination="@id/challengeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_challenges_by_member" />
 
     <fragment
         android:id="@+id/challengeFragment"
         android:name="com.challenge.codewars.feature.challenge.presentation.ChallengeFragment"
-        tools:layout="@layout/fragment_challenge" />
+        tools:layout="@layout/fragment_challenge" >
+
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.challenge.codewars.feature.main.presentation.MainActivity"
+        android:label="MainActivity" />
 </navigation>

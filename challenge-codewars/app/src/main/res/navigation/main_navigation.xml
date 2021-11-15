@@ -26,7 +26,6 @@
             android:name="username"
             app:argType="string"
             app:nullable="false" />
-
     </activity>
 
 </navigation>
