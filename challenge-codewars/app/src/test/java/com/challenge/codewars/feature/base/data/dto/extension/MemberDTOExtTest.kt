@@ -14,7 +14,7 @@ class MemberDTOExtTest {
         val mockMemberDTO = mockk<MemberDTO>()
         val expected = MemberEntity(name = "Bruna", rank = 1, bestLanguage = "bestLanguage", point = 123)
 
-        every { mockMemberDTO.name } returns "Bruna"
+        every { mockMemberDTO.username } returns "Bruna"
 
         assertEquals(expected, mockMemberDTO.toEntity())
     }
