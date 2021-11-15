@@ -12,7 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MemberActivity : AppCompatActivity() {
 
-    var binding: ActivityMemberBinding? = null
+    private var binding: ActivityMemberBinding? = null
     val args by navArgs<MemberActivityArgs>()
 
     override fun onCreate(savedInstanceState: Bundle?) {

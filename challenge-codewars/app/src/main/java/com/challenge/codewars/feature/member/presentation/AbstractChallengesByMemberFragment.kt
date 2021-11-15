@@ -11,7 +11,7 @@ import com.challenge.codewars.feature.member.presentation.data.MemberEvent
 
 abstract class AbstractChallengesByMemberFragment : Fragment() {
 
-    var binding: FragmentChallengesByMemberBinding? = null
+    private var binding: FragmentChallengesByMemberBinding? = null
     val adapter = ChallengesAdapter(::showChallenge)
 
     abstract fun getViewModel(): MemberViewModel

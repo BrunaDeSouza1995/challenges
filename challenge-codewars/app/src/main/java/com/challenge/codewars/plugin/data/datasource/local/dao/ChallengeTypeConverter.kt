@@ -7,13 +7,13 @@ object ChallengeTypeConverter {
 
     @JvmStatic
     @TypeConverter
-    fun stringToChallengeType(data: String?): ChallengeType? {
+    fun stringToChallengeType(data: String?): ChallengeType {
         return data.convertStringToType(ChallengeType::class.java)
     }
 
     @JvmStatic
     @TypeConverter
-    fun challengeTypeToString(data: ChallengeType?): String? {
+    fun challengeTypeToString(data: ChallengeType?): String {
         return data.convertTypeToString()
     }
 

@@ -1,6 +1,5 @@
 package com.challenge.codewars.feature.search.presentation
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavDirections

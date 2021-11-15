@@ -11,7 +11,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ChallengeActivity : AppCompatActivity() {
 
-    var binding: ActivityChallengeBinding? = null
+    private var binding: ActivityChallengeBinding? = null
     private val args by navArgs<ChallengeActivityArgs>()
     private val viewModel: ChallengeViewModel by viewModels()
 
