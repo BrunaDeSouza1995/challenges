@@ -6,9 +6,9 @@ import com.challenge.codewars.feature.member.domain.FetchAuthoredChallengesByMem
 import com.challenge.codewars.feature.member.domain.FetchCompletedChallengesByMemberUseCase
 import com.challenge.codewars.feature.member.domain.GetAuthoredChallengesByMemberUseCase
 import com.challenge.codewars.feature.member.domain.GetCompletedChallengesByMemberUseCase
-import com.challenge.codewars.feature.member.presentation.data.MemberDirections
-import com.challenge.codewars.feature.member.presentation.data.MemberEvent
-import com.challenge.codewars.feature.member.presentation.data.MemberViewState
+import com.challenge.codewars.feature.member.presentation.model.MemberDirections
+import com.challenge.codewars.feature.member.presentation.model.MemberEvent
+import com.challenge.codewars.feature.member.presentation.model.MemberViewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

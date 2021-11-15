@@ -4,8 +4,8 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity.ChallengeType
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity.ChallengeType
 import io.reactivex.Observable
 
 @Dao

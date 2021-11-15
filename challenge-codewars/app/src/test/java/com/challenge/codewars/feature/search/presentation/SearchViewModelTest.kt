@@ -3,16 +3,11 @@ package com.challenge.codewars.feature.search.presentation
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.challenge.codewars.R
 import com.challenge.codewars.feature.search.data.SearchFakeRepository
-import com.challenge.codewars.feature.search.data.entity.MemberEntity
-import com.challenge.codewars.feature.search.data.entity.MemberFakeEntity
 import com.challenge.codewars.feature.search.data.entity.MemberFakeEntity.membersEntity
 import com.challenge.codewars.feature.search.data.entity.MemberFakeEntity.membersEntitySortByRack
 import com.challenge.codewars.feature.search.domain.GetSearchedMembersUseCase
 import com.challenge.codewars.feature.search.domain.SearchMemberByUsernameUseCase
-import com.challenge.codewars.feature.search.presentation.model.MemberSortBy
-import com.challenge.codewars.feature.search.presentation.model.MemberSortBy.RACK_DESC
 import com.challenge.codewars.feature.search.presentation.model.SearchEvent
-import com.challenge.codewars.feature.search.presentation.model.extension.sortByIdOrRank
 import com.challenge.codewars.plugin.getOrAwaitValue
 import io.mockk.spyk
 import io.mockk.verify

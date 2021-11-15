@@ -5,7 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.navArgs
 import com.challenge.codewars.databinding.ActivityChallengeBinding
-import com.challenge.codewars.feature.base.data.dto.ChallengeDTO
+import com.challenge.codewars.feature.challenge.data.dto.ChallengeDTO
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

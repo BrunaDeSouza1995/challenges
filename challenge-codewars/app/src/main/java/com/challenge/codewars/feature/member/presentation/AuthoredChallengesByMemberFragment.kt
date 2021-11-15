@@ -1,8 +1,8 @@
 package com.challenge.codewars.feature.member.presentation
 
 import androidx.fragment.app.viewModels
-import com.challenge.codewars.feature.member.presentation.data.MemberEvent
-import com.challenge.codewars.feature.member.presentation.data.MemberViewState
+import com.challenge.codewars.feature.member.presentation.model.MemberEvent
+import com.challenge.codewars.feature.member.presentation.model.MemberViewState
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

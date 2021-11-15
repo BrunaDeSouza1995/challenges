@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.challenge.codewars.databinding.FragmentChallengesByMemberBinding
-import com.challenge.codewars.feature.member.presentation.data.MemberEvent
+import com.challenge.codewars.feature.member.presentation.list.ChallengesAdapter
+import com.challenge.codewars.feature.member.presentation.model.MemberEvent
 
 abstract class AbstractChallengesByMemberFragment : Fragment() {
 

@@ -1,6 +1,6 @@
 package com.challenge.codewars.feature.challenge.domain
 
-import com.challenge.codewars.feature.base.data.dto.ChallengeDTO
+import com.challenge.codewars.feature.challenge.data.dto.ChallengeDTO
 import com.challenge.codewars.feature.base.domain.BaseUseCase
 import com.challenge.codewars.feature.challenge.data.ChallengeRepository
 import io.reactivex.Observable

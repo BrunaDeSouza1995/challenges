@@ -1,12 +1,12 @@
 package com.challenge.codewars.plugin.repository
 
-import com.challenge.codewars.feature.base.data.dto.AuthoredChallengeDTO
-import com.challenge.codewars.feature.base.data.dto.CompletedChallengeDTO
-import com.challenge.codewars.feature.base.data.dto.extension.toEntity
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity.ChallengeType.AUTHORED
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity.ChallengeType.COMPLETED
-import com.challenge.codewars.feature.base.data.repository.call
+import com.challenge.codewars.feature.member.data.dto.AuthoredChallengeDTO
+import com.challenge.codewars.feature.member.data.dto.CompletedChallengeDTO
+import com.challenge.codewars.feature.member.data.extension.toEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity.ChallengeType.AUTHORED
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity.ChallengeType.COMPLETED
+import com.challenge.codewars.feature.base.data.call
 import com.challenge.codewars.feature.member.data.MemberRepository
 import com.challenge.codewars.plugin.database.dao.ChallengeDao
 import com.challenge.codewars.plugin.network.CodewarsService

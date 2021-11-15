@@ -10,7 +10,7 @@ class MemberDTOExtTest {
     @Test
     fun `convert MemberDTO to MemberEntity`() {
         val expected =
-            MemberEntity(name = "some_user", rank = 134, bestLanguage = "JavaScript", point = 1819)
+            MemberEntity(id = 1, name = "some_user", rank = 134, bestLanguage = "JavaScript", point = 1819)
 
         assertEquals(expected, MemberFakeEntity.memberEntity())
     }

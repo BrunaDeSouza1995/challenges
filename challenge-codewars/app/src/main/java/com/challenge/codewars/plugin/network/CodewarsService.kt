@@ -1,8 +1,8 @@
 package com.challenge.codewars.plugin.network
 
-import com.challenge.codewars.feature.base.data.dto.AuthoredChallengeDTO
-import com.challenge.codewars.feature.base.data.dto.ChallengeDTO
-import com.challenge.codewars.feature.base.data.dto.CompletedChallengeDTO
+import com.challenge.codewars.feature.member.data.dto.AuthoredChallengeDTO
+import com.challenge.codewars.feature.challenge.data.dto.ChallengeDTO
+import com.challenge.codewars.feature.member.data.dto.CompletedChallengeDTO
 import com.challenge.codewars.feature.search.data.dto.MemberDTO
 import io.reactivex.Observable
 import retrofit2.Response

@@ -1,6 +1,6 @@
 package com.challenge.codewars.feature.search.data.extension
 
-import com.challenge.codewars.feature.base.data.dto.extension.getList
+import com.challenge.codewars.feature.search.data.entity.getList
 import com.challenge.codewars.feature.search.data.dto.MemberDTO
 import com.challenge.codewars.feature.search.data.entity.MemberEntity
 

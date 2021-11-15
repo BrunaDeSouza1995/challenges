@@ -1,8 +1,8 @@
-package com.challenge.codewars.feature.member.presentation
+package com.challenge.codewars.feature.member.presentation.list
 
 import androidx.recyclerview.widget.RecyclerView
 import com.challenge.codewars.databinding.ItemListChallengeBinding
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
 
 class ChallengesViewHolder(
     private val binding: ItemListChallengeBinding,

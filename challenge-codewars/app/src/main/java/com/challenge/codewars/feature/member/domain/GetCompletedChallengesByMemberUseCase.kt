@@ -1,6 +1,6 @@
 package com.challenge.codewars.feature.member.domain
 
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
 import com.challenge.codewars.feature.base.domain.BaseUseCase
 import com.challenge.codewars.feature.member.data.MemberRepository
 import io.reactivex.Observable

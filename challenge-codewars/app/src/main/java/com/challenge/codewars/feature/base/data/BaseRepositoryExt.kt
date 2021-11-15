@@ -1,4 +1,4 @@
-package com.challenge.codewars.feature.base.data.repository
+package com.challenge.codewars.feature.base.data
 
 import io.reactivex.Observable
 import retrofit2.HttpException
@@ -10,7 +10,7 @@ fun <R>  Observable<Response<R>>.call(): Observable<Result<R>> {
         .onErrorReturn(Result.Companion::failure)
 }
 
-fun <R> Response<R>.handleResponse(): Observable<R> {
+private fun <R> Response<R>.handleResponse(): Observable<R> {
     return if (isSuccessful) {
         Observable.just(body())
     } else {

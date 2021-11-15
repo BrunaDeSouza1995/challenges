@@ -1,10 +1,10 @@
-package com.challenge.codewars.feature.member.presentation
+package com.challenge.codewars.feature.member.presentation.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.challenge.codewars.databinding.ItemListChallengeBinding.inflate
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
 
 class ChallengesAdapter(
     private val onClick: (String) -> Unit

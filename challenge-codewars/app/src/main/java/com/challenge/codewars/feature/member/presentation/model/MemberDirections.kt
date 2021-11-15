@@ -1,4 +1,4 @@
-package com.challenge.codewars.feature.member.presentation.data
+package com.challenge.codewars.feature.member.presentation.model
 
 import androidx.navigation.NavDirections
 import com.challenge.codewars.MemberNavigationDirections

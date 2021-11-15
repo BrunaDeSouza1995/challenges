@@ -1,7 +1,7 @@
 package com.challenge.codewars.plugin.repository
 
-import com.challenge.codewars.feature.base.data.dto.ChallengeDTO
-import com.challenge.codewars.feature.base.data.repository.call
+import com.challenge.codewars.feature.challenge.data.dto.ChallengeDTO
+import com.challenge.codewars.feature.base.data.call
 import com.challenge.codewars.feature.challenge.data.ChallengeRepository
 import com.challenge.codewars.plugin.network.CodewarsService
 import io.reactivex.Observable

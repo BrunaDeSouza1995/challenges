@@ -2,7 +2,7 @@ package com.challenge.codewars.feature.challenge.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.challenge.codewars.feature.base.data.dto.ChallengeDTO
+import com.challenge.codewars.feature.challenge.data.dto.ChallengeDTO
 import com.challenge.codewars.feature.challenge.domain.GetChallengeInformationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

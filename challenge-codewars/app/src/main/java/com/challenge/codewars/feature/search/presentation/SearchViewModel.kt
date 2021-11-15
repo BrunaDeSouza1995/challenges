@@ -19,7 +19,7 @@ class SearchViewModel @Inject constructor(
     private val searchMemberByUsernameUseCase: SearchMemberByUsernameUseCase
 ) : ViewModel() {
 
-    private var memberSortBy = MemberSortBy.ID_DESC
+    private var memberSortBy = MemberSortBy.ID
 
     val searchedMembersLiveData: MutableLiveData<List<MemberEntity>> by lazy { MutableLiveData<List<MemberEntity>>() }
     val searchDirections = MutableLiveData<NavDirections>()
@@ -62,15 +62,15 @@ class SearchViewModel @Inject constructor(
         if (isChecked.not()) return
 
         memberSortBy = when (checkedId) {
-            R.id.search_result_sort_by_rack_button -> MemberSortBy.RACK_DESC
-            else -> MemberSortBy.ID_DESC
+            R.id.search_result_sort_by_rack_button -> MemberSortBy.RACK
+            else -> MemberSortBy.ID
         }
         memberSortBy()
     }
 
     private fun memberSortBy(members: List<MemberEntity>? = null) {
         val list = (members ?: searchedMembersLiveData.value)?.toMutableList()
-        list.sortByIdOrRank(memberSortBy)
-        searchedMembersLiveData.postValue(list)
+        val listSorted = list.sortByIdOrRank(memberSortBy)
+        searchedMembersLiveData.postValue(listSorted)
     }
 }

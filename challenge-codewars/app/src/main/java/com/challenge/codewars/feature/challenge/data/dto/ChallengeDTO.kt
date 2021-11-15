@@ -1,4 +1,4 @@
-package com.challenge.codewars.feature.base.data.dto
+package com.challenge.codewars.feature.challenge.data.dto
 
 data class ChallengeDTO(
     val id: String,

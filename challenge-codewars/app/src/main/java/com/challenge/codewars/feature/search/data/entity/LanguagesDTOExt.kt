@@ -1,4 +1,4 @@
-package com.challenge.codewars.feature.base.data.dto.extension
+package com.challenge.codewars.feature.search.data.entity
 
 import com.challenge.codewars.feature.search.data.dto.LanguageDTO
 import com.challenge.codewars.feature.search.data.dto.LanguagesDTO

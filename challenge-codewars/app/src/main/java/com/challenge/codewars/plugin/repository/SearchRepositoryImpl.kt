@@ -3,7 +3,7 @@ package com.challenge.codewars.plugin.repository
 import com.challenge.codewars.feature.search.data.dto.MemberDTO
 import com.challenge.codewars.feature.search.data.extension.toEntity
 import com.challenge.codewars.feature.search.data.entity.MemberEntity
-import com.challenge.codewars.feature.base.data.repository.call
+import com.challenge.codewars.feature.base.data.call
 import com.challenge.codewars.feature.search.data.SearchRepository
 import com.challenge.codewars.plugin.database.dao.MemberDao
 import com.challenge.codewars.plugin.network.CodewarsService

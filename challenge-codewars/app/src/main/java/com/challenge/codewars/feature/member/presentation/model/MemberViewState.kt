@@ -1,6 +1,6 @@
-package com.challenge.codewars.feature.member.presentation.data
+package com.challenge.codewars.feature.member.presentation.model
 
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
 
 sealed class MemberViewState(open val list: List<ChallengeEntity>) {
     data class AuthoredChallengesViewState(override val list: List<ChallengeEntity>) : MemberViewState(list)

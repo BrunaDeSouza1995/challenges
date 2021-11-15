@@ -7,10 +7,10 @@ import com.challenge.codewars.feature.search.data.extension.toEntity
 object MemberFakeEntity {
 
     fun memberEntity(): MemberEntity {
-        return member().toEntity()
+        return member().toEntity().copy(id = 1)
     }
 
-    fun member1Entity(): MemberEntity {
+    private fun member1Entity(): MemberEntity {
         return member1().toEntity()
     }
 

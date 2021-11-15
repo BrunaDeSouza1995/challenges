@@ -1,8 +1,8 @@
 package com.challenge.codewars.feature.member.data
 
-import com.challenge.codewars.feature.base.data.dto.AuthoredChallengeDTO
-import com.challenge.codewars.feature.base.data.dto.CompletedChallengeDTO
-import com.challenge.codewars.feature.base.data.entity.ChallengeEntity
+import com.challenge.codewars.feature.member.data.dto.AuthoredChallengeDTO
+import com.challenge.codewars.feature.member.data.dto.CompletedChallengeDTO
+import com.challenge.codewars.feature.member.data.entity.ChallengeEntity
 import io.reactivex.Observable
 
 interface MemberRepository {
