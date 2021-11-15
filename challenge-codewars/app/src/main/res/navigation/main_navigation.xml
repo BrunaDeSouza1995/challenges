@@ -16,20 +16,17 @@
             app:destination="@id/memberFragment" />
     </fragment>
 
-    <fragment
+    <activity
         android:id="@+id/memberFragment"
-        android:name="com.challenge.codewars.feature.member.presentation.MemberFragment"
+        android:name="com.challenge.codewars.feature.member.presentation.MemberActivity"
         android:label="Member"
-        tools:layout="@layout/fragment_member">
+        tools:layout="@layout/activity_member">
 
-        <action
-            android:id="@+id/action_memberFragment_to_challengeFragment"
-            app:destination="@id/challengeFragment" />
-    </fragment>
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="false" />
 
-    <fragment
-        android:id="@+id/challengeFragment"
-        android:name="com.challenge.codewars.feature.challenge.presentation.ChallengeFragment"
-        android:label="Challenge"
-        tools:layout="@layout/fragment_challenge" />
+    </activity>
+
 </navigation>

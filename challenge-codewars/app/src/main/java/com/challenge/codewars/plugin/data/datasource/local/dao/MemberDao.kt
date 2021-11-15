@@ -1,10 +1,8 @@
 package com.challenge.codewars.plugin.data.datasource.local.dao
 
-import android.util.Log
 import androidx.room.*
 import com.challenge.codewars.feature.base.data.entity.MemberEntity
 import io.reactivex.Observable
-
 
 private const val LIMIT = 5
 

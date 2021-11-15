@@ -5,18 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.challenge.codewars.databinding.FragmentMemberBinding
+import com.challenge.codewars.databinding.FragmentAuthoredChallengesByMemberBinding
 
-class MemberFragment : Fragment() {
+class AuthoredChallengesByMemberFragment : Fragment() {
 
-    var binding: FragmentMemberBinding? = null
+    var binding: FragmentAuthoredChallengesByMemberBinding? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMemberBinding.inflate(inflater, container, false)
+        binding = FragmentAuthoredChallengesByMemberBinding.inflate(inflater, container, false)
         return binding?.root
     }
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member_navigation"
+    app:startDestination="@id/completedChallengesByMemberFragment">
+
+    <fragment
+        android:id="@+id/completedChallengesByMemberFragment"
+        android:name="com.challenge.codewars.feature.member.presentation.CompletedChallengesByMemberFragment"
+        tools:layout="@layout/fragment_completed_challenges_by_member">
+        <action
+            android:id="@+id/action_completedChallengesByMemberFragment_to_challengeFragment"
+            app:destination="@id/challengeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authoredChallengesByMemberFragment"
+        android:name="com.challenge.codewars.feature.member.presentation.AuthoredChallengesByMemberFragment"
+        tools:layout="@layout/fragment_authored_challenges_by_member">
+        <action
+            android:id="@+id/action_authoredChallengesByMemberFragment_to_challengeFragment"
+            app:destination="@id/challengeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/challengeFragment"
+        android:name="com.challenge.codewars.feature.challenge.presentation.ChallengeFragment"
+        tools:layout="@layout/fragment_challenge" />
+</navigation>
