@@ -14,11 +14,7 @@ abstract class BaseUseCase<I, O> {
         onDispatchSuccessResult: (successResult: O) -> Unit = {},
         onDispatchErrorResult: (errorResult: Throwable) -> Unit = {}
     ): Disposable {
-        return Observable
-            .fromCallable { guardEntrance(input) }
-            .filter { it }
-            .switchMap { execute(input) }
-            .onErrorReturn(Result.Companion::failure)
+        return process(input)
             .subscribeOn(subscribe)
             .observeOn(observe)
             .subscribe {
@@ -28,6 +24,14 @@ abstract class BaseUseCase<I, O> {
                     onDispatchErrorResult(e)
                 }
             }
+    }
+
+    fun process(input: I? = null): Observable<Result<O>> {
+        return Observable
+            .fromCallable { guardEntrance(input) }
+            .filter { it }
+            .switchMap { execute(input) }
+            .onErrorReturn(Result.Companion::failure)
     }
 
     open fun guardEntrance(input: I? = null): Boolean {

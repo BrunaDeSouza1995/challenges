@@ -6,7 +6,7 @@ import androidx.navigation.NavDirections
 import com.challenge.codewars.R
 import com.challenge.codewars.feature.search.data.entity.MemberEntity
 import com.challenge.codewars.feature.search.domain.GetSearchedMembersUseCase
-import com.challenge.codewars.feature.search.domain.SearchUseCase
+import com.challenge.codewars.feature.search.domain.SearchMemberByUsernameUseCase
 import com.challenge.codewars.feature.search.presentation.model.MemberSortBy
 import com.challenge.codewars.feature.search.presentation.model.SearchEvent
 import com.challenge.codewars.feature.search.presentation.model.extension.sortByIdOrRank
@@ -15,8 +15,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SearchViewModel @Inject constructor(
-    private val searchUseCase: SearchUseCase,
-    getSearchedMembersUseCase: GetSearchedMembersUseCase
+    getSearchedMembersUseCase: GetSearchedMembersUseCase,
+    private val searchMemberByUsernameUseCase: SearchMemberByUsernameUseCase
 ) : ViewModel() {
 
     private var memberSortBy = MemberSortBy.ID_DESC
@@ -49,13 +49,7 @@ class SearchViewModel @Inject constructor(
     }
 
     private fun searchMemberByUsernameOrId(text: String) {
-        searchUseCase.invoke(
-            text,
-            onDispatchSuccessResult = {
-            },
-            onDispatchErrorResult = {
-            }
-        )
+        searchMemberByUsernameUseCase.invoke(text)
     }
 
     private fun showChallengesByMember(event: SearchEvent.ShowChallengesByMember) {

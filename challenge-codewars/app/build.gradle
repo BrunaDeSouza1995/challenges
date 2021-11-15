@@ -36,8 +36,6 @@ android {
     viewBinding {
         enabled = true
     }
-
-    sourceSets.test.resources.srcDirs += ["src/main/assets"]
 }
 
 dependencies {
@@ -48,6 +46,7 @@ dependencies {
     implementation "androidx.core:core-ktx:$core_ext"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    testImplementation "android.arch.core:core-testing:$core_testing"
     // G
     implementation "com.google.code.gson:gson:$gson_version"
     // H

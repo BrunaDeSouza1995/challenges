@@ -6,6 +6,7 @@ buildscript {
     // C
     ext.constraintlayout = '2.1.1'
     ext.core_ext = '1.7.0'
+    ext.core_testing = '1.1.1'
     // G
     ext.gson_version = '2.8.8'
     // H

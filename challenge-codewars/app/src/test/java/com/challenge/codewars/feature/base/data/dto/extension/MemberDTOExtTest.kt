@@ -1,10 +1,7 @@
 package com.challenge.codewars.feature.base.data.dto.extension
 
-import com.challenge.codewars.feature.search.data.dto.MemberDTO
 import com.challenge.codewars.feature.search.data.entity.MemberEntity
-import com.challenge.codewars.feature.search.data.extension.toEntity
-import io.mockk.every
-import io.mockk.mockk
+import com.challenge.codewars.feature.search.data.entity.MemberFakeEntity
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -12,11 +9,9 @@ class MemberDTOExtTest {
 
     @Test
     fun `convert MemberDTO to MemberEntity`() {
-        val mockMemberDTO = mockk<MemberDTO>()
-        val expected = MemberEntity(name = "Bruna", rank = 1, bestLanguage = "bestLanguage", point = 123)
+        val expected =
+            MemberEntity(name = "some_user", rank = 134, bestLanguage = "JavaScript", point = 1819)
 
-        every { mockMemberDTO.username } returns "Bruna"
-
-        assertEquals(expected, mockMemberDTO.toEntity())
+        assertEquals(expected, MemberFakeEntity.memberEntity())
     }
 }
